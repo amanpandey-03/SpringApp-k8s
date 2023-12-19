@@ -8,11 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-<<<<<<< HEAD
-        git branch: 'main', url: 'https://github.com/amanpandey-03/SpringApp-k8s.git'
-=======
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amanpandey-03/SpringApp-k8s.git']])
->>>>>>> aac916637888fe44410dd3315f9890b425b185c8
       }
     }
     stage('Build and Test') {
